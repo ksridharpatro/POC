@@ -1,4 +1,4 @@
-package com.example.poc.rough;
+package com.example.poc.programs;
 
 public class RunJava {
     public static void main(String[] args) {
