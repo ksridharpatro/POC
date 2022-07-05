@@ -31,17 +31,12 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
     }
 
     @Override
-    public boolean performClick() {
-        return super.performClick();
-    }
-
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Rect bounds;
         Drawable drawableLeft = getCompoundDrawables()[0];
         Drawable drawableRight = getCompoundDrawables()[2];
         Drawable drawableTop = getCompoundDrawables()[1];
         Drawable drawableBottom = getCompoundDrawables()[3];
+        Rect bounds;
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             int actionX = (int) event.getX();
             int actionY = (int) event.getY();
@@ -59,6 +54,7 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
 
             // this works for left since container shares 0,0 origin with bounds
             if (drawableLeft != null) {
+                bounds = null;
                 bounds = drawableLeft.getBounds();
 
                 int x, y;
@@ -68,7 +64,7 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
                 y = actionY;
 
                 if (!bounds.contains(actionX, actionY)) {
-                    //Gives the +20 area for tapping.
+                    /** Gives the +20 area for tapping. */
                     x = (int) (actionX - extraTapArea);
                     y = (int) (actionY - extraTapArea);
 
@@ -77,7 +73,7 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
                     if (y <= 0)
                         y = actionY;
 
-                    //Creates square from the smallest value.
+                    /** Creates square from the smallest value */
                     if (x < y) {
                         y = x;
                     }
@@ -94,22 +90,25 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
 
             if (drawableRight != null) {
 
+                bounds = null;
                 bounds = drawableRight.getBounds();
 
                 int x, y;
                 int extraTapArea = 13;
 
-
-                //IF USER CLICKS JUST OUT SIDE THE RECTANGLE OF THE DRAWABLE
-                //THAN ADD X AND SUBTRACT THE Y WITH SOME VALUE SO THAT AFTER
-                //CALCULATING X AND Y CO-ORDINATE LIES INTO THE DRAWBABLE
-                //BOUND. - this process help to increase the tappable area of
-                //the rectangle.
+                /**
+                 * IF USER CLICKS JUST OUT SIDE THE RECTANGLE OF THE DRAWABLE
+                 * THAN ADD X AND SUBTRACT THE Y WITH SOME VALUE SO THAT AFTER
+                 * CALCULATING X AND Y CO-ORDINATE LIES INTO THE DRAWBABLE
+                 * BOUND. - this process help to increase the tappable area of
+                 * the rectangle.
+                 */
                 x = (int) (actionX + extraTapArea);
                 y = (int) (actionY - extraTapArea);
 
-                //Since this is right drawable subtract the value of x from the width
-                //of view. so that width - tappedarea will result in x co-ordinate in drawable bound.
+                /**Since this is right drawable subtract the value of x from the width
+                 * of view. so that width - tappedarea will result in x co-ordinate in drawable bound.
+                 */
                 x = getWidth() - x;
 
                 /*x can be negative if user taps at x co-ordinate just near the width.
@@ -130,16 +129,16 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
                 if (y <= 0)
                     y = actionY;
 
-                //If drawble bounds contains the x and y points then move ahead.
+                /**If drawble bounds contains the x and y points then move ahead.*/
                 if (bounds.contains(x, y) && clickListener != null) {
                     clickListener
                             .onClick(DrawableClickListener.DrawablePosition.RIGHT);
                     event.setAction(MotionEvent.ACTION_CANCEL);
                     return false;
                 }
-                performClick();
                 return super.onTouchEvent(event);
             }
+
         }
         return super.onTouchEvent(event);
     }

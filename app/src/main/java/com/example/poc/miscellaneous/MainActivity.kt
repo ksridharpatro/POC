@@ -19,14 +19,19 @@ class MainActivity : AppCompatActivity() {
                 CustomEditText.DrawableClickListener.DrawablePosition.RIGHT -> {
                     Log.d("CustomEditText", "right drawable clicked")
                 }
+                CustomEditText.DrawableClickListener.DrawablePosition.TOP -> {
+                    Log.d("CustomEditText", "TOP drawable clicked")
+                }
+                CustomEditText.DrawableClickListener.DrawablePosition.BOTTOM -> {
+                    Log.d("CustomEditText", "BOTTOM drawable clicked")
+                }
+                CustomEditText.DrawableClickListener.DrawablePosition.LEFT -> {
+                    Log.d("CustomEditText", "LEFT drawable clicked")
+                }
                 else -> {
 
                 }
             }
-        }
-
-        binding.editText.setOnClickListener {
-            Log.d("CustomEditText", "edit text clicked")
         }
     }
 }
