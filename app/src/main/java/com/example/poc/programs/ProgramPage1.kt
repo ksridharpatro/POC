@@ -150,3 +150,26 @@ class Node constructor() {
     }
 }
 //--------------------------------------------------------------------------------------------------
+
+fun canSegmentString(s: String?, dictionary: Set<String>): Boolean {
+    println(s)
+
+    if (s.isNullOrEmpty() || dictionary.contains(s)) {
+        return true
+    }
+
+    var first: String?
+    var second: String?
+    for (i in 1..s.length) {
+        first = s.substring(0, i)
+        if (dictionary.contains(first)) {
+            second = s.substring(i)
+            if (canSegmentString(second, dictionary)) {
+                return true
+            } else {
+                continue
+            }
+        }
+    }
+    return false
+}
