@@ -6,19 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".miscellaneous.MainActivity">
 
-    <com.example.poc.miscellaneous.CustomEditText
-        android:id="@+id/editText"
+    <Button
+        android:id="@+id/startActivity1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_calender"
-        android:drawableTop="@drawable/ic_calender"
-        android:drawableEnd="@drawable/ic_calender"
-        android:drawableBottom="@drawable/ic_calender"
-        android:drawablePadding="10dp"
-        android:text="Hello Hello Hello "
+        android:text="Start Activity 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Activity 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/startActivity1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 package com.example.poc.miscellaneous
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poc.databinding.ActivityMain2Binding
 
@@ -14,24 +14,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         val rootView = binding.root
         setContentView(rootView)
-        binding.editText.setDrawableClickListener {
-            when (it) {
-                CustomEditText.DrawableClickListener.DrawablePosition.RIGHT -> {
-                    Log.d("CustomEditText", "right drawable clicked")
-                }
-                CustomEditText.DrawableClickListener.DrawablePosition.TOP -> {
-                    Log.d("CustomEditText", "TOP drawable clicked")
-                }
-                CustomEditText.DrawableClickListener.DrawablePosition.BOTTOM -> {
-                    Log.d("CustomEditText", "BOTTOM drawable clicked")
-                }
-                CustomEditText.DrawableClickListener.DrawablePosition.LEFT -> {
-                    Log.d("CustomEditText", "LEFT drawable clicked")
-                }
-                else -> {
-
-                }
-            }
+        binding.startActivity1.setOnClickListener {
+            startActivity(Intent(this, com.example.poc.MainActivity::class.java))
+        }
+        binding.startActivity2.setOnClickListener {
+            startActivity(Intent(this, MainActivity2::class.java))
         }
     }
 }
