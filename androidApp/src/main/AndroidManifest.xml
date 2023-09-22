@@ -10,11 +10,13 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
+
+        <!--KMM POC Activities START-->
         <activity
             android:name=".kmmpoc.MainActivity"
             android:exported="true">
@@ -23,16 +25,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
+        <!--KMM POC Activities START-->
+
+        <!--Navigation POC Activities START-->
         <activity
             android:name=".navigationpoc.Activity1"
             android:exported="true">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".navigationpoc.Activity2" />
         <activity android:name=".navigationpoc.Activity3" />
         <activity android:name=".navigationpoc.Activity4" />
+        <!--Navigation POC Activities END-->
+
     </application>
 </manifest> 
