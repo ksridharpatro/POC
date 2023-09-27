@@ -10,10 +10,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <!--KMM POC Activities START-->
@@ -40,6 +40,15 @@
         <activity android:name=".navigationpoc.Activity3" />
         <activity android:name=".navigationpoc.Activity4" />
         <!--Navigation POC Activities END-->
+
+        <activity
+            android:name=".tooltip.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest> 
