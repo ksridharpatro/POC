@@ -60,6 +60,6 @@ android {
     namespace = "com.example.poc"
     compileSdk = 33
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
 }
