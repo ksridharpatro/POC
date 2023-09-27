@@ -4,12 +4,18 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -58,19 +64,26 @@ class MainActivity : ComponentActivity() {
                     R.dimen.editBalloonOverlayRadius
                 )
             )
-            setDismissWhenClicked(true)
+            setDismissWhenClicked(false)
         }
+        var okPressed by remember { mutableStateOf(false) }
+
         Box(modifier = Modifier.fillMaxSize()) {
             Balloon(
                 modifier = Modifier.align(Alignment.Center),
                 builder = builder,
                 balloonContent = {
-                    Text(
-                        modifier = Modifier.fillMaxWidth(),
-                        text = "Now you can edit your profile!",
-                        textAlign = TextAlign.Center,
-                        color = Color.White
-                    )
+                    Column {
+                        Text(
+                            modifier = Modifier.fillMaxWidth(),
+                            text = "Now you can edit your profile!",
+                            textAlign = TextAlign.Center,
+                            color = Color.White
+                        )
+                        Button(onClick = { okPressed = true }) {
+                            Text(text = "OK")
+                        }
+                    }
                 }
             ) { balloonWindow ->
                 Button(
@@ -78,6 +91,17 @@ class MainActivity : ComponentActivity() {
                     onClick = { balloonWindow.showAlignTop() }
                 ) {
                     Text(text = "showAlignTop")
+                }
+                LaunchedEffect(key1 = okPressed) {
+                    if (okPressed) {
+                        balloonWindow.dismiss()
+                    }
+                }
+
+                LaunchedEffect(key1 = Unit) {
+                    balloonWindow.setOnBalloonDismissListener {
+                        okPressed = false
+                    }
                 }
             }
         }
