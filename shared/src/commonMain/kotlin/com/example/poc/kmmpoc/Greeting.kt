@@ -1,4 +1,4 @@
-package com.example.poc
+package com.example.poc.kmmpoc
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

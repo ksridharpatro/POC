@@ -1,4 +1,4 @@
-package com.example.poc
+package com.example.poc.kmmpoc
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDate

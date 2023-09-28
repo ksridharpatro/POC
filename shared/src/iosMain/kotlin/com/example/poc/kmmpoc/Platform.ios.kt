@@ -1,4 +1,4 @@
-package com.example.poc
+package com.example.poc.kmmpoc
 
 import platform.UIKit.UIDevice
 
