@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.poc.android"
-    compileSdk = 34
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.example.poc.android"
         minSdk = 21
@@ -46,5 +46,5 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.4.3")
     implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.activity:activity-compose:1.7.1")
-    implementation("com.github.skydoves:balloon-compose:1.6.0")
+    implementation("com.github.skydoves:balloon-compose:1.5.4")
 }

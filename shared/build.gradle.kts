@@ -67,7 +67,7 @@ kotlin {
 
 android {
     namespace = "com.example.poc"
-    compileSdk = 34
+    compileSdk = 33
     defaultConfig {
         minSdk = 21
     }
