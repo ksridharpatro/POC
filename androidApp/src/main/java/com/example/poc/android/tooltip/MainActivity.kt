@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
             setArrowPosition(0.5f)
             setWidth(BalloonSizeSpec.WRAP)
             setHeight(BalloonSizeSpec.WRAP)
-            setPadding(12)
+            setPadding(10)
             setCornerRadius(8f)
             setBackgroundColor(Color.Cyan)
             setIsVisibleOverlay(true)
