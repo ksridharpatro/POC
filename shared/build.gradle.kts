@@ -72,3 +72,9 @@ android {
         minSdk = 21
     }
 }
+
+sqldelight {
+    database("AppDatabase") {
+        packageName = "com.example.poc.kmmpoc2.cache"
+    }
+}
