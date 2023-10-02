@@ -11,6 +11,8 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		A5A3ABCF2ACACAE200D0151E /* RocketLaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3ABCE2ACACAE200D0151E /* RocketLaunchRow.swift */; };
+		A5A3ABD52ACACDEB00D0151E /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3ABD42ACACDEB00D0151E /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A3ABCE2ACACAE200D0151E /* RocketLaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchRow.swift; sourceTree = "<group>"; };
+		A5A3ABD42ACACDEB00D0151E /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5A3ABCD2ACACA2D00D0151E /* kmmpoc2 */,
 				A53315632AC5B916000AE605 /* kmmpoc */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -96,6 +101,15 @@
 				7555FF82242A565900829871 /* ContentView.swift */,
 			);
 			path = kmmpoc;
+			sourceTree = "<group>";
+		};
+		A5A3ABCD2ACACA2D00D0151E /* kmmpoc2 */ = {
+			isa = PBXGroup;
+			children = (
+				A5A3ABCE2ACACAE200D0151E /* RocketLaunchRow.swift */,
+				A5A3ABD42ACACDEB00D0151E /* ContentView2.swift */,
+			);
+			path = kmmpoc2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A3ABCF2ACACAE200D0151E /* RocketLaunchRow.swift in Sources */,
+				A5A3ABD52ACACDEB00D0151E /* ContentView2.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
