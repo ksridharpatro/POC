@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "POC"
 include(":androidApp")
 include(":shared")
+include(":mylibrary")
