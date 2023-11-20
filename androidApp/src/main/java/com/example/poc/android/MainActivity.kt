@@ -17,7 +17,7 @@ import java.util.Locale
 class MainActivity : ComponentActivity() {
 
     override fun attachBaseContext(newBase: Context) {
-        val locale = Locale("")
+        val locale = Locale("hi", "")
         Locale.setDefault(locale)
         val config = Configuration(newBase.resources.configuration)
         config.setLocale(locale)
