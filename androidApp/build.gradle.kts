@@ -58,4 +58,5 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.accompanist:accompanist-pager:0.20.3")
     implementation("com.google.accompanist:accompanist-pager-indicators:0.20.3")
+    implementation("androidx.compose.material3:material3:1.3.0-alpha01")
 }
